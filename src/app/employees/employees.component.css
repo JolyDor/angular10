@@ -1,0 +1,122 @@
+body{
+
+}
+
+.add-block{
+  width: 45%;
+  align-items: center;
+  border-radius: 10px;
+  -webkit-box-shadow: -1px 0px 22px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 0px 22px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 22px 0px rgba(0,0,0,0.75);
+  height: 37vh;
+  position: relative;
+
+}
+
+
+.wr-header{
+  margin-top: 1vh;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.wrapper{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 40%;
+
+}
+
+form{
+  margin-left: 2%;
+}
+.add-block input{
+  height: 2vh;
+  margin-right: 5%;
+  margin-top: 2vh;
+  width: 40%;
+}
+
+.in-wrapper{
+  width: 100%;
+}
+
+.buttons-block{
+  width: 50%;
+  margin-left: auto;
+  border: 0;
+  border-bottom: 2vh;
+  position: absolute;
+  bottom: 1vh;
+  right: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+
+select{
+  margin-top: 2vh;
+}
+button{
+  background-color: rgb(17, 107, 214);
+  border: 0;
+  width: 100%;
+  height: 2vh;
+  line-height: 2vh;
+  margin: 2%;
+
+}
+
+.clear{
+  clear: both;
+}
+
+.list-wrapper{
+  width: 80%;
+  height: 20vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+
+}
+.table{
+  width: 100%;
+  text-align: center;
+  border: 0;
+  background-color: lightgray;
+}
+.table thead{
+  background-color: gray;
+}
+
+.table tbody{
+  background-color: lightgray;
+}
+
+
+.buttons-wrapper-add{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.buttons-wrapper-add button{
+  width: 20%;
+
+}

@@ -1,0 +1,96 @@
+<div class="container">
+  <header>
+    <div class="add-block left">
+      <div class="wr-header">Новый сотрудник</div>
+      <hr>
+
+      <form   #empForm="ngForm" (ngSubmit)="getEmpVals(empForm.value)">
+
+        <input ngModel id="name" name="name" type="input">
+        <label for="name">Фамилия</label>
+
+        <div class="in-wrapper">
+          <input ngModel id="sirname" name="sirname" type="input">
+          <label for="sirname">Имя</label>
+        </div>
+        <div class="in-wrapper">
+
+
+          <select  [(ngModel)]="selectedOption"  [ngModelOptions]="{standalone:true}"  id="titleselect">
+            <option  *ngFor="let pos of positions">{{pos.name}}</option>
+
+          </select>
+
+          <label for="titleselect">Должность</label>
+        </div>
+        <div class="in-wrapper">
+          <input ngModel id="payment" name="payment" type="input">
+          <label for="payment">Оклад</label>
+        </div>
+        <div class="in-wrapper">
+          <input ngModel id="employed" name="employed" type="input">
+          <label for="employed">Нанят</label>
+        </div>
+        <div class="in-wrapper">
+          <input ngModel id="fired" name="fired" type="input">
+          <label for="fired">Уволен</label>
+        </div>
+        <hr>
+        <div class="buttons-block">
+          <button>закрыть</button>
+          <button>добавить</button>
+        </div>
+        <br>
+      </form>
+
+    </div>
+    <div class="add-block right">
+      <div class="wr-header">Новая должность</div>
+      <hr>
+      <form class="in-wrapper" #posForm="ngForm" (ngSubmit)="getPosVals(posForm.value)" >
+        <input name="name" ngModel type="input">
+        <label for="name">Должность</label>
+        <div class="buttons-block">
+          <button >закрыть</button>
+          <button>добавить</button>
+        </div>
+      </form>
+      <br>
+    </div>
+    <div class="clear"></div>
+
+<!--    <div class="buttons-wrapper-add">-->
+
+<!--      <button (click)="openModelEmp()" >Add Emp</button>-->
+<!--      <button>Add Pos</button>-->
+
+<!--    </div>-->
+    <div class="list-wrapper">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Должность</th>
+          <th>Сотрудник</th>
+          <th>Оклад</th>
+          <th>Дата Назначения</th>
+          <th>Дата уволнения</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr *ngFor="let employee of employees">
+          <td>{{employee.id}}</td>
+          <td>{{employee.position}}</td>
+          <td>{{employee.name}}</td>
+          <td>{{employee.payment}}</td>
+          <td>{{employee.start}}</td>
+          <td>{{employee.until}}</td>
+        </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+  </header>
+</div>
